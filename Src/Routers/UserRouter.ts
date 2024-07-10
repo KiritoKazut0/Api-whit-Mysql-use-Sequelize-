@@ -4,7 +4,8 @@ import { validateFields } from "../middlewares/Users.middlleware";
 
 const router = Router();
 
-router.get('/', [validateFields], UsersCtrl.getUsers);
-router.post('/',UsersCtrl.addUser);
-
+router.post('/', [validateFields], UsersCtrl.addUser);
+router.get('/',UsersCtrl.getUsers);
+router.delete('/:id', UsersCtrl.deleteUserById);
+router.get('/:id', UsersCtrl.getUserByid)
 export default router;

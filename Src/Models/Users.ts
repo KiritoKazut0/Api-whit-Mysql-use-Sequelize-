@@ -12,6 +12,8 @@
             defaultValue: uuidv4,
             primaryKey: true
         }
+    },{
+        timestamps: false
     });
 
     Users.sync({ alter: true })
@@ -20,7 +22,7 @@
         })
 
         .catch((error) => {
-            console.error(`An error has occurred ${error}`);
+            console.error(`An error has occurred in Users ${error}`);
         })
 
     export default Users;
